@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PlayerView: View {
+    var meditationVM: ARKitPlayerViewModel
     @State private var value: Double = 0.0
     @Environment(\.dismiss) var dismiss
     
@@ -37,7 +38,7 @@ struct PlayerView: View {
                     Spacer()
                 }
                 
-                Text("1 Minute Relaxing Meditation")
+                Text(meditationVM.meditation.title)
                     .font(.title)
                     .foregroundColor(.white)
                 
@@ -96,7 +97,8 @@ struct PlayerView: View {
 }
 
 struct PlayerView_Previews: PreviewProvider {
+    static let meditationVM = ARKitPlayerViewModel(meditation: Meditation.data)
     static var previews: some View {
-        PlayerView()
+        PlayerView(meditationVM: meditationVM)
     }
 }

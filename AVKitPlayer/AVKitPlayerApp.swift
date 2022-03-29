@@ -11,7 +11,7 @@ import SwiftUI
 struct AVKitPlayerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MedidationView(meditationVM: ARKitPlayerViewModel(meditation: Meditation.data))
         }
     }
 }

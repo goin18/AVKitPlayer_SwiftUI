@@ -9,11 +9,12 @@ import SwiftUI
 
 struct MedidationView: View {
     
+    @StateObject var meditationVM: ARKitPlayerViewModel
     @State private var showPlayer = false
     
     var body: some View {
         VStack(spacing: 0) {
-            Image("image_2")
+            Image(meditationVM.meditation.image)
                 .resizable()
                 .scaledToFill()
                 .frame(height: UIScreen.main.bounds.height / 3)
@@ -27,13 +28,13 @@ struct MedidationView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Music")
                         
-                        Text("0s")
+                        Text(DateComponentsFormatter.abbreviated.string(from: meditationVM.meditation.duration) ?? meditationVM.meditation.duration.formatted() + "s")
                     }
                     .font(.subheadline)
                     .textCase(.uppercase)
                     .opacity(0.7)
                     
-                    Text("1 Minute Relaxing Meditation")
+                    Text(meditationVM.meditation.title)
                         .font(.title)
                     
                     Button {
@@ -49,7 +50,7 @@ struct MedidationView: View {
                     }
 
                     
-                    Text("In the first part of this course, I’ll show you how to build a meditation app. It could be a music player app too, the concept is the same.")
+                    Text(meditationVM.meditation.description)
                         
                     Spacer()
                 }
@@ -60,13 +61,14 @@ struct MedidationView: View {
         }
         .ignoresSafeArea()
         .fullScreenCover(isPresented: $showPlayer) {
-            PlayerView()
+            PlayerView(meditationVM: meditationVM)
         }
     }
 }
 
 struct MedidationView_Previews: PreviewProvider {
+    static let meditationVM = ARKitPlayerViewModel(meditation: Meditation.data)
     static var previews: some View {
-        MedidationView()
+        MedidationView(meditationVM: meditationVM)
     }
 }
