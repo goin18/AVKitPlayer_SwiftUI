@@ -10,12 +10,12 @@ import SwiftUI
 @main
 struct AVKitPlayerApp: App {
     
-    @StateObject var audioMenager = AudioMenager()
+    @StateObject var audioManager = AudioManager()
     
     var body: some Scene {
         WindowGroup {
             MedidationView(meditationVM: ARKitPlayerViewModel(meditation: Meditation.data))
-                .environmentObject(audioMenager)
+                .environmentObject(audioManager)
         }
     }
 }

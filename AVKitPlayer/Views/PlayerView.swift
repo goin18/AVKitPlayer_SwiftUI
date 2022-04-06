@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PlayerView: View {
-    @EnvironmentObject var audioMengaer: AudioMenager
+    @EnvironmentObject var audioMangaer: AudioManager
     var meditationVM: ARKitPlayerViewModel
     var isPreview: Bool = false
     @State private var value: Double = 0.0
@@ -110,8 +110,8 @@ struct PlayerView: View {
             .padding()
         }
         .onAppear {
-//            AudioMenager.shared.startPlayer(track: meditationVM.meditation.track, isPreview: isPreview)
-            audioMengaer.startPlayer(track: meditationVM.meditation.track, isPreview: isPreview)
+//            AudioMangaer.shared.startPlayer(track: meditationVM.meditation.track, isPreview: isPreview)
+            audioMangaer.startPlayer(track: meditationVM.meditation.track, isPreview: isPreview)
         }
         .onReceive(timer) { _ in
             guard let player = audioMengaer.player, !isEditiong else { return }
@@ -124,6 +124,6 @@ struct PlayerView_Previews: PreviewProvider {
     static let meditationVM = ARKitPlayerViewModel(meditation: Meditation.data)
     static var previews: some View {
         PlayerView(meditationVM: meditationVM, isPreview: true)
-            .environmentObject(AudioMenager())
+            .environmentObject(AudioMangaer())
     }
 }

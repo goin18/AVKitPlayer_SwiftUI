@@ -8,8 +8,8 @@
 import Foundation
 import AVKit
 
-//class AudioMenager {
-//    static let shared = AudioMenager()
+//class AudioManager {
+//    static let shared = AudioManager()
 //
 //    var player: AVAudioPlayer?
 //
@@ -35,7 +35,7 @@ import AVKit
 //    }
 //}
 
-class AudioMenager: ObservableObject {
+class AudioManager: ObservableObject {
     var player: AVAudioPlayer?
     @Published private(set) var isPlaying: Bool = false {
         didSet {
