@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D3276F1627EF9DCE00B4BCBC /* AVKitPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3276F1527EF9DCE00B4BCBC /* AVKitPlayerApp.swift */; };
-		D3276F1827EF9DCE00B4BCBC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3276F1727EF9DCE00B4BCBC /* ContentView.swift */; };
 		D3276F1A27EF9DD000B4BCBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3276F1927EF9DD000B4BCBC /* Assets.xcassets */; };
 		D3276F1D27EF9DD000B4BCBC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3276F1C27EF9DD000B4BCBC /* Preview Assets.xcassets */; };
 		D3276F2427EFA05B00B4BCBC /* MedidationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3276F2327EFA05B00B4BCBC /* MedidationView.swift */; };
@@ -16,12 +15,13 @@
 		D3276F2827EFA4CC00B4BCBC /* PlaybackControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3276F2727EFA4CC00B4BCBC /* PlaybackControlButton.swift */; };
 		D376A05E27F2DDF200B9C5D0 /* ARKitPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D376A05D27F2DDF200B9C5D0 /* ARKitPlayerViewModel.swift */; };
 		D376A06027F2DFDB00B9C5D0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D376A05F27F2DFDB00B9C5D0 /* Extensions.swift */; };
+		D376A06527F2E2BE00B9C5D0 /* AudioMenager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D376A06427F2E2BE00B9C5D0 /* AudioMenager.swift */; };
+		D38E68E827FC600800A85EE0 /* meditation1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D38E68E727FC600800A85EE0 /* meditation1.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D3276F1227EF9DCE00B4BCBC /* AVKitPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVKitPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3276F1527EF9DCE00B4BCBC /* AVKitPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVKitPlayerApp.swift; sourceTree = "<group>"; };
-		D3276F1727EF9DCE00B4BCBC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D3276F1927EF9DD000B4BCBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3276F1C27EF9DD000B4BCBC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D3276F2327EFA05B00B4BCBC /* MedidationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedidationView.swift; sourceTree = "<group>"; };
@@ -29,6 +29,9 @@
 		D3276F2727EFA4CC00B4BCBC /* PlaybackControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackControlButton.swift; sourceTree = "<group>"; };
 		D376A05D27F2DDF200B9C5D0 /* ARKitPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitPlayerViewModel.swift; sourceTree = "<group>"; };
 		D376A05F27F2DFDB00B9C5D0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D376A06427F2E2BE00B9C5D0 /* AudioMenager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMenager.swift; sourceTree = "<group>"; };
+		D38E68E727FC600800A85EE0 /* meditation1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = meditation1.mp3; sourceTree = "<group>"; };
+		D38E68E927FC604300A85EE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,15 +64,13 @@
 		D3276F1427EF9DCE00B4BCBC /* AVKitPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				D3276F1727EF9DCE00B4BCBC /* ContentView.swift */,
-				D376A05D27F2DDF200B9C5D0 /* ARKitPlayerViewModel.swift */,
+				D38E68E927FC604300A85EE0 /* Info.plist */,
 				D3276F1527EF9DCE00B4BCBC /* AVKitPlayerApp.swift */,
-				D3276F2327EFA05B00B4BCBC /* MedidationView.swift */,
+				D376A06227F2E27900B9C5D0 /* Views */,
+				D376A06127F2E26800B9C5D0 /* Model */,
+				D376A06327F2E28E00B9C5D0 /* Helpers */,
 				D3276F1927EF9DD000B4BCBC /* Assets.xcassets */,
 				D3276F1B27EF9DD000B4BCBC /* Preview Content */,
-				D3276F2527EFA2A400B4BCBC /* PlayerView.swift */,
-				D3276F2727EFA4CC00B4BCBC /* PlaybackControlButton.swift */,
-				D376A05F27F2DFDB00B9C5D0 /* Extensions.swift */,
 			);
 			path = AVKitPlayer;
 			sourceTree = "<group>";
@@ -80,6 +81,34 @@
 				D3276F1C27EF9DD000B4BCBC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D376A06127F2E26800B9C5D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D376A05D27F2DDF200B9C5D0 /* ARKitPlayerViewModel.swift */,
+				D376A06427F2E2BE00B9C5D0 /* AudioMenager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D376A06227F2E27900B9C5D0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3276F2327EFA05B00B4BCBC /* MedidationView.swift */,
+				D3276F2527EFA2A400B4BCBC /* PlayerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D376A06327F2E28E00B9C5D0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D38E68E727FC600800A85EE0 /* meditation1.mp3 */,
+				D376A05F27F2DFDB00B9C5D0 /* Extensions.swift */,
+				D3276F2727EFA4CC00B4BCBC /* PlaybackControlButton.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +169,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D38E68E827FC600800A85EE0 /* meditation1.mp3 in Resources */,
 				D3276F1D27EF9DD000B4BCBC /* Preview Assets.xcassets in Resources */,
 				D3276F1A27EF9DD000B4BCBC /* Assets.xcassets in Resources */,
 			);
@@ -153,7 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3276F2427EFA05B00B4BCBC /* MedidationView.swift in Sources */,
-				D3276F1827EF9DCE00B4BCBC /* ContentView.swift in Sources */,
+				D376A06527F2E2BE00B9C5D0 /* AudioMenager.swift in Sources */,
 				D3276F2827EFA4CC00B4BCBC /* PlaybackControlButton.swift in Sources */,
 				D376A05E27F2DDF200B9C5D0 /* ARKitPlayerViewModel.swift in Sources */,
 				D3276F1627EF9DCE00B4BCBC /* AVKitPlayerApp.swift in Sources */,
@@ -292,6 +322,7 @@
 				DEVELOPMENT_TEAM = H26PDHED66;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AVKitPlayer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -321,6 +352,7 @@
 				DEVELOPMENT_TEAM = H26PDHED66;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AVKitPlayer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

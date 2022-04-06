@@ -70,5 +70,6 @@ struct MedidationView_Previews: PreviewProvider {
     static let meditationVM = ARKitPlayerViewModel(meditation: Meditation.data)
     static var previews: some View {
         MedidationView(meditationVM: meditationVM)
+            .environmentObject(AudioMenager())
     }
 }

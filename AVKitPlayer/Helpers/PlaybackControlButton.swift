@@ -21,7 +21,6 @@ struct PlaybackControlButton: View {
                 .font(.system(size: fontSize))
                 .foregroundColor(color)
         }
-
     }
 }
 
